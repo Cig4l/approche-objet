@@ -17,4 +17,32 @@ public class Personne {
         this.lastName = lastName;
         this.address = address;
     }
+
+    public void printName() {
+        System.out.println(this.firstName + " " + this.lastName.toUpperCase());
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public void setAddress(AdressePostale address) {
+        this.address = address;
+    }
+
+    public String getLastName() {
+        return this.lastName;
+    }
+
+    public String getFirstName() {
+        return this.firstName;
+    }
+
+    public AdressePostale getAddress() {
+        return this.address;
+    }
 }
