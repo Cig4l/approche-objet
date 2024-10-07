@@ -9,6 +9,11 @@ public class Compte {
         this.accountBalance = accountBalance;
     }
 
+    @Override
+    public String toString() {
+        return "numéro de compte : " + this.accountNumber + "\nsolde du compte : " + this.accountBalance;
+    }
+
     public double getAccountNumber() {
         return accountNumber;
     }
