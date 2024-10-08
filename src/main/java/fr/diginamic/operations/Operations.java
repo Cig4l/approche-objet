@@ -9,7 +9,7 @@ public class Operations {
             case '/': return a / b;
             default:
                 System.out.println("Veuillez entrer un opérateur de calcul.");
-                return 0;
+                return 0.0;
         }
     }
 }

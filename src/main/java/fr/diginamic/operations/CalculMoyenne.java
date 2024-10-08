@@ -3,13 +3,9 @@ package fr.diginamic.operations;
 import java.util.ArrayList;
 
 public class CalculMoyenne {
-    private Double[] array;
     private ArrayList<Double> arrayList = new ArrayList<>();
 
-    public CalculMoyenne(Double[] array) {
-        for(double number : array) {
-            arrayList.add(number);
-        }
+    public CalculMoyenne(ArrayList<Double> arrayList) {
         this.arrayList = arrayList;
     }
 
