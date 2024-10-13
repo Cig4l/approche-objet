@@ -1,12 +1,23 @@
 package fr.diginamic.automates;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
-public class Rules {
+public class Game {
     private Grid grid;
+    int choice;
 
-    public Rules(Grid grid){
-        this.grid = grid;
+    public Game(int choice) throws IOException {
+        this.grid = new Grid(choice);
+    }
+
+//    public Game(Grid grid){
+//        this.grid = grid;
+//    }
+//
+    public void run() throws IOException {
+        this.grid.print();
+        play();
     }
 
     public void play(){
@@ -86,5 +97,9 @@ public class Rules {
             }
         }
         return false;
+    }
+
+    public Grid getGrid() {
+        return grid;
     }
 }

@@ -37,12 +37,32 @@ public class Grid {
     }
 
     public List<String> chooseAutomaton(int choice) throws IOException {
-        if(choice == 1){
-            Path path = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/smallOscillator.csv");
-            return Files.readAllLines(path);
+        switch(choice){
+            case 1:
+                Path path1 = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/smallOscillator.csv");
+                return Files.readAllLines(path1);
+            case 2:
+                Path path2 = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/bigOscillator.csv");
+                return Files.readAllLines(path2);
+            case 3:
+                Path path3 = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/smallSpaceShip.csv");
+                return Files.readAllLines(path3);
+            case 4:
+                Path path4 = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/bigSpaceShip.csv");
+                return Files.readAllLines(path4);
+            default:
+                System.out.println("Veuillez faire un choix valide");
+                return List.of();
         }
-        System.out.println("Veuillez faire un choix valide");
-        return List.of();
+//        if(choice == 1){
+//            Path path = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/smallOscillator.csv");
+//            return Files.readAllLines(path);
+//        } else if (choice == 2) {
+//            Path path = Paths.get("/home/cigale/IdeaProjects/approche-objet/src/main/java/fr/diginamic/automates/bigOscillator.csv");
+//            return Files.readAllLines(path);
+//        }
+//        System.out.println("Veuillez faire un choix valide");
+//        return List.of();
     }
 
     public void emptyGrid(int height, int width){
