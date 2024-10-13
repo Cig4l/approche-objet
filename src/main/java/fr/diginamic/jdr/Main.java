@@ -30,11 +30,5 @@ public class Main {
                 break;
             }
         }
-
-//        Hero hero = new Hero();
-//        hero.printHeroInfo();
-//        Fight fight = new Fight();
-//        Characters enemy = fight.getRandomEnemy();
-//        fight.fight(hero);
     }
 }
