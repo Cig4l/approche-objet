@@ -5,14 +5,6 @@ import java.util.List;
 
 public class TestVilles {
     public static void main(String[] args) {
-//        o Nice, 343 000 hab.
-//                o Carcassonne, 47 800 hab.
-//                o Narbonne, 53 400 hab.
-//                o Lyon, 484 000 hab.
-//                o Foix, 9 700 hab.
-//                o Pau, 77 200 hab.
-//                o Marseille, 850 700 hab.
-//                o Tarbes, 40 600 hab.
 
         Ville[] villes = new Ville[]{
             new Ville("Nice",343000),
@@ -60,5 +52,16 @@ public class TestVilles {
         for(int i=0; i<arrayVilles.size(); i++){
             System.out.println(arrayVilles.get(i).getName() + " : " + arrayVilles.get(i).getPopulation() + " habitants");
         }
+
+        Ville compare1 = new Ville("Collioure", 300);
+        Ville compare2 = new Ville("Collioure", 300);
+        Ville compare3 = new Ville("Sète", 2000);
+
+        System.out.println("\nCollioure et Collioure avec compare() : " + compare1.equals(compare2));
+        System.out.println("Collioure et Sète et Nice avec compare() : " + compare1.equals(compare3));
+        System.out.println("Collioure et Collioure avec == : " + (compare1 == compare2));
+        System.out.println("Collioure et Collioure avec == : " + (compare1 == compare3));
+        compare1 = compare2;
+        System.out.println("Collioure et Collioure avec réassignation : " + (compare1 == compare2));
     }
 }
