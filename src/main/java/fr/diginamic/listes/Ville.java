@@ -6,7 +6,7 @@ public class Ville {
     private String name;
     private Integer population;
 
-    Ville(String name, Integer population){
+    public Ville(String name, Integer population){
         this.name = name;
         this.population = population;
     }
